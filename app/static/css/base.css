@@ -1,1 +1,28 @@
 
+#appname {
+    width: 200px;
+    margin: auto;
+}
+
+#username {
+    float: right;
+}
+
+body {
+    background: #64718D;
+}
+
+#outher {
+    text-align: center;
+}
+
+#content {
+    text-align: center;
+    border: solid;
+    margin: auto;
+    display: inline-block;
+    border-radius: 25px;
+    background: #CCE4DF;
+    padding: 20px;
+}
+
