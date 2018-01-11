@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+         <h2>Login</h2>
+
+
+        {{ error if error != None }}
+
+        <form method='post' action='login_submit'>
+            <div>
+            <label>Username:</label>
+            <input type='text' name='username' value='{{username if username != None}}' required>
+            </div>
+
+            <div>
+            <label>Password:</label>
+            <input type='password' name='password' required>
+            </div>
+
+            <input type='submit' value='Submit'>
+        </form>
+
+        <form method='post' action='new'>
+            <input type='submit' value='New User'>
+        </form>
+
+{% endblock %}
+

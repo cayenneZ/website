@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <script>
+            $(function() {
+                $("#new_account_from").submit(function(){
+                    p1 = $("#password1").val();
+                    p2 = $("#password2").val();
+
+                    if (p1 != p2) {
+                        alert("Passwords don't match!");
+                        return false;
+                    }
+                    return true;
+                });
+            });
+        </script>
+
+        <h2>New User Account</h2>
+
+        {{ error if error != None }}
+
+        <form method='post' action='new_submit' id="new_account_from">
+            <div>
+            <label>Username:</label>
+            <input type='text' name='username' value='{{username if username != None}}' required>
+            </div>
+
+            <div>
+            <label>Password:</label>
+            <input type='password' name='password' id='password1' required>
+            </div>
+
+            <div>
+            <label>Confirm Password:</label>
+            <input type='password' name='confirm_password' id='password2' required>
+            </div>
+
+
+            <div>
+            <label>First name:</label>
+            <input type='text' name='first' value='{{first if first != None}}' required>
+            </div>
+
+            <div>
+            <label>Last name:</label>
+            <input type='text' name='last' value='{{last if last != None}}' required>
+            </div>
+
+            <div>
+            <label>Email:</label>
+            <input type='text' name='email' value='{{email if email != None}}' required>
+            </div>
+
+
+            <input type='submit' value='Create'>
+        </form>
+
+{% endblock %}
+
