@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <form action="{{url_for('thumbnails')}}" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+  {% for row in cursor %}
+
+    <img src = '../{{row[0]}}' />
+
+
+    {% endfor %}
+
+{% endblock %}
