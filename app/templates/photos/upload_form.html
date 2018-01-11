@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {{ error if error != None }}
+
+	<form action="{{url_for('thumbnails')}}" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+     <form action="{{url_for('upload_save')}}"  enctype="multipart/form-data" method="post">
+
+   	What is the image files to upload? <input type="file" name="uploadedfile"><br />
+
+   	<input type="submit" value="Send">
+	<input type="reset">
+    </form>
+{% endblock %}
